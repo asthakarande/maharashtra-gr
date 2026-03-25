@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GR Results – Maharashtra GR Portal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="results-page">
+
+  <div class="bg-texture"></div>
+
+  <!-- ── HEADER (compact) ── -->
+  <header class="site-header compact">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand clickable">
+        <div class="ashoka-emblem small">
+          <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22" stroke="#C9A84C" stroke-width="1.5"/>
+            <circle cx="24" cy="24" r="6" fill="#C9A84C"/>
+            <circle cx="24" cy="24" r="3" fill="#1A2B52"/>
+            <line x1="24" y1="6" x2="24" y2="18" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="24" y1="30" x2="24" y2="42" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="6" y1="24" x2="18" y2="24" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="30" y1="24" x2="42" y2="24" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="11.5" y1="11.5" x2="19.8" y2="19.8" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="28.2" y1="28.2" x2="36.5" y2="36.5" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="36.5" y1="11.5" x2="28.2" y2="19.8" stroke="#C9A84C" stroke-width="1.2"/>
+            <line x1="19.8" y1="28.2" x2="11.5" y2="36.5" stroke="#C9A84C" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-marathi small">महाराष्ट्र शासन</span>
+          <span class="brand-eng small">GR Portal</span>
+        </div>
+      </a>
+      <div class="header-center-title">
+        <span id="headerDeptName">Government Resolutions</span>
+      </div>
+      <a href="index.html" class="new-search-btn">&#8592; New Search</a>
+    </div>
+  </header>
+
+  <!-- ── RESULTS MAIN ── -->
+  <main class="results-main">
+
+    <!-- Active Filter Bar -->
+    <div class="active-filters-bar" id="filtersBar">
+      <span class="filters-lbl">Filters:</span>
+      <div id="filterTags" class="filter-tags-row"></div>
+      <a href="index.html" class="modify-search-link">Modify Search</a>
+    </div>
+
+    <!-- Results Header Row -->
+    <div class="results-topbar" id="resultsTopbar">
+      <div class="results-title-area">
+        <h2 id="resultsHeading" class="results-heading">Loading…</h2>
+        <p id="resultsSubtitle" class="results-subtitle"></p>
+      </div>
+      <span id="pageIndicator" class="page-indicator"></span>
+    </div>
+
+    <!-- GR Cards -->
+    <div id="grList" class="gr-list"></div>
+
+    <!-- Pagination -->
+    <nav id="pagination" class="pagination" aria-label="Page navigation"></nav>
+
+    <!-- No Results State -->
+    <div id="noResults" class="no-results-state hidden">
+      <div class="no-results-glyph">&#128196;</div>
+      <h3 id="noResultsHeading">No Records Found</h3>
+      <p id="noResultsMsg">No Government Resolutions match your search.</p>
+      <a href="index.html" class="back-to-search-btn">&#8592; Back to Search</a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2024 Government of Maharashtra &nbsp;|&nbsp; Official GR Portal &nbsp;|&nbsp; All Rights Reserved</p>
+  </footer>
+
+  <!-- Load data first, then results logic -->
+  <script src="gr-data.js"></script>
+  <script src="js/results.js"></script>
+</body>
+</html>
