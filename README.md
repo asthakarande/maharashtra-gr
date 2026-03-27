@@ -39,6 +39,7 @@ A web-based platform to search and access **Government Resolutions (GRs)** issue
 maharashtra-gr/
 │── index.html
 │── results.html
+│── gr-data.js
 │── css/
 │   ├──style.css
 │── js/
